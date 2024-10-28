@@ -1,0 +1,7 @@
+- id: readme-right
+  name: Readme readme-commands
+  description: Runs commands (`$ <my command>`) found in ```readme-commands``` adds the stdout; if the file contents change, the hook will fail
+  entry: readme-right
+  language: python
+  files: \w+\.md$
+  pass_filenames: true

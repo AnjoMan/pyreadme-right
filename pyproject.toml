@@ -1,0 +1,27 @@
+[project]
+name = "pyreadme_right"
+description = "A script to run README.md examples and verify their output"
+license = { text = "MIT" }
+dynamic = ["version"]
+requires-python = ">=3.9"
+authors = [{ email = "anjoman@github.com" }, { name = "AnjoMan" }]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pre-commit", "pytest", "ruff"]
+
+[project.urls]
+repository = "https://github.com/AnjoMan/pyreadme-right"
+
+[project.scripts]
+readme-right = "pyreadme_right.__main__:main"
+
+[build-system]
+requires = ["setuptools >= 71.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { file = "pyreadme_right/VERSION" }
+
+[tool.setuptools.packages.find]
+include = ["pyreadme_right*"]
